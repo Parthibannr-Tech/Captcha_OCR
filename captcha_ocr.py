@@ -9,7 +9,7 @@ ocr = PaddleOCR(use_angle_cls=True, use_gpu=True)
 stop_event = threading.Event()
 
 def captcha_ocr():
-    folder_path = "images/"
+    folder_path = "Inp_images/"
     image_extensions = {".png", ".jpg", ".jpeg", ".bmp", ".tiff"}
 
     while not stop_event.is_set():
