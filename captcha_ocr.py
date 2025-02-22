@@ -1,6 +1,7 @@
 import os
 import cv2
 import time
+import traceback
 import threading
 import numpy as np
 from paddleocr import PaddleOCR
@@ -74,6 +75,7 @@ try:
         time.sleep(1)
 except KeyboardInterrupt:
     print("Stopping OCR processing...")
+    traceback.print_exc() 
     stop_event.set()
     thread.join()
     print("Thread stopped successfully.")
